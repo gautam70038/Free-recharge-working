@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TATA IPL धमाका ऑफर!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Baloo 2', sans-serif; /* Baloo 2 हिंदी के लिए अच्छा है */
+            margin: 0;
+            padding: 0; /* बॉडी की पैडिंग हटा दी */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #fff;
+            overflow: hidden; /* पटाखे बाहर न निकलें */
+            background: linear-gradient(135deg, #ff9a00, #ff5f6d, #ff007f, #0077ff); /* वाइब्रेंट ग्रेडिएंट */
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6); /* थोड़ा ट्रांसपेरेंट ब्लैक */
+            padding: 30px 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 420px;
+            width: 90%; /* मोबाइल के लिए बेहतर */
+            position: relative; /* पटाखे इसके पीछे रहें */
+            z-index: 10;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        img#ipl-logo {
+            max-width: 200px; /* थोड़ा छोटा किया ताकि टेक्स्ट को जगह मिले */
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.7)); /* हल्का पीला ग्लो */
+        }
+
+        h1 {
+            color: #ffd700; /* गोल्ड कलर */
+            font-family: 'Baloo 2', cursive;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: #f0f0f0;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        input[type="tel"] {
+            width: calc(100% - 28px);
+            padding: 12px 14px;
+            border: 2px solid #ff9a00;
+            border-radius: 10px;
+            font-size: 1em;
+            background-color: rgba(255,255,255,0.1);
+            color: #fff;
+            transition: border-color .2s ease, box-shadow .2s ease;
+        }
+        input[type="tel"]::placeholder {
+            color: #ccc;
+        }
+        input[type="tel"]:focus {
+            border-color: #ffd700;
+            outline: 0;
+            box-shadow: 0 0 15px rgba(255,215,0,.5);
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff5f6d, #ff007f);
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(255, 95, 109, 0.4);
+        }
+        button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(255, 95, 109, 0.6);
+        }
+        button:active {
+            transform: translateY(0px) scale(0.98);
+        }
+
+        #share-section {
+            display: none; /* Initially hidden */
+            margin-top: 25px;
+        }
+        #whatsapp-share-button {
+            background: #25D366; /* WhatsApp Green */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+        #whatsapp-share-button:hover {
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+        }
+        #whatsapp-share-button img {
+            width: 24px;
+            margin-right: 12px;
+        }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #ddd;
+            background-color: rgba(0,0,0,0.3);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* Firecracker Animation Styles */
+        .firework-particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            opacity: 1;
+            z-index: 5; /* कंटेनर के पीछे, बैकग्राउंड के ऊपर */
+            pointer-events: none; /* ताकि ये क्लिक में बाधा न डालें */
+        }
+    </style>
+</head>
+<body>
+    <!-- पटाखे यहाँ बनेंगे -->
+
+    <div class="container">
+        <img id="ipl-logo" src="ipl.png" alt="IPL Logo">
+        <h1>टाटा IPL धमाका ऑफर!</h1>
+
+        <div id="phone-entry-section">
+            <p>🎉 मुफ़्त रिचार्ज का शानदार मौका! 🎊 TATA IPL की ओर से! अपना फ़ोन नंबर नीचे डालें और जीतें!</p>
+            <div class="input-group">
+                <input type="tel" id="phone-number" placeholder="अपना 10 अंकों का फ़ोन नंबर डालें" pattern="[0-9]{10}">
+            </div>
+            <button id="submit-phone-button">अभी क्लेम करें!</button>
+        </div>
+
+        <div id="share-section">
+            <p>वाह! 🥳 फ्री रिचार्ज के लिए आखरी स्टेप! इस धमाकेदार ऑफर को WhatsApp पर <strong>5 ग्रुप्स</strong> या <strong>10 दोस्तों</strong> के साथ तुरंत शेयर करें!</p>
+            <button id="whatsapp-share-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png" alt="WhatsApp Icon">
+                WhatsApp पर धूम मचाएं!
+            </button>
+        </div>
+
+        <div class="footer-note">
+            <p>यह पेज मनोरंजन और प्रदर्शन के लिए है। टाटा IPL या BCCI ऐसी किसी योजना की पुष्टि नहीं करते। ऑनलाइन ऑफर्स से सतर्क रहें।</p>
+        </div>
+    </div>
+
+    <script>
+        const phoneEntrySection = document.getElementById('phone-entry-section');
+        const shareSection = document.getElementById('share-section');
+        const submitPhoneButton = document.getElementById('submit-phone-button');
+        const phoneNumberInput = document.getElementById('phone-number');
+        const whatsappShareButton = document.getElementById('whatsapp-share-button');
+
+        submitPhoneButton.addEventListener('click', function() {
+            const phoneNumber = phoneNumberInput.value.trim();
+            if (phoneNumber.length === 10 && /^\d+$/.test(phoneNumber)) {
+                phoneEntrySection.style.display = 'none';
+                shareSection.style.display = 'block';
+                // शेयर सेक्शन दिखने पर भी पटाखे चलाएं
+                for(let i=0; i<3; i++) { // 3 बार पटाखे
+                    setTimeout(() => createFirework(Math.random() * window.innerWidth, window.innerHeight * 0.8), i * 300);
+                }
+            } else {
+                alert('कृपया एक मान्य 10 अंकों का फ़ोन नंबर डालें।');
+                phoneNumberInput.focus();
+            }
+        });
+
+        whatsappShareButton.addEventListener('click', function() {
+            const pageUrl = window.location.href;
+            const message = `💥 TATA IPL का धमाका ऑफर! 🏏 मुझे तो फ्री रिचार्ज मिल रहा है! आप भी जल्दी करें: ${pageUrl}`;
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            setTimeout(() => {
+                alert('शेयर करने के लिए धन्यवाद! आपका रिचार्ज जल्द ही प्रोसेस होगा! (यह एक डेमो संदेश है)');
+            }, 2000);
+        });
+
+        // --- Firecracker Animation ---
+        const fireworkColors = ['#FFD700', '#FF4500', '#FF69B4', '#00CED1', '#32CD32', '#ADFF2F', '#FF00FF', '#1E90FF'];
+
+        function createParticle(x, y, angle, speed, color) {
+            const particle = document.createElement('div');
+            particle.classList.add('firework-particle');
+            particle.style.backgroundColor = color;
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            document.body.appendChild(particle);
+
+            let currentX = x;
+            let currentY = y;
+            const vx = Math.cos(angle) * speed;
+            let vy = Math.sin(angle) * speed;
+            const gravity = 0.1; // गुरुत्वाकर्षण
+            let opacity = 1;
+            let life = 0;
+            const maxLife = 60 + Math.random() * 40; // 60 से 100 फ्रेम तक
+
+            function animateParticle() {
+                currentX += vx;
+                currentY += vy;
+                vy += gravity; // गुरुत्वाकर्षण का प्रभाव
+                opacity -= 0.015; // धीरे-धीरे गायब
+                life++;
+
+                if (opacity <= 0 || life >= maxLife) {
+                    particle.remove();
+                    return;
+                }
+
+                particle.style.transform = `translate(${currentX - x}px, ${currentY - y}px)`;
+                particle.style.opacity = opacity;
+                requestAnimationFrame(animateParticle);
+            }
+            requestAnimationFrame(animateParticle);
+        }
+
+        function createFirework(x, y) {
+            const particleCount = 50 + Math.floor(Math.random() * 50); // 50 से 100 पार्टिकल्स
+            const baseAngle = Math.random() * Math.PI * 2; // शुरुआती एंगल
+
+            for (let i = 0; i < particleCount; i++) {
+                const angle = baseAngle + (Math.random() - 0.5) * Math.PI * 1.5; // थोड़ा फैलाव
+                const speed = 2 + Math.random() * 5; // रैंडम स्पीड
+                const color = fireworkColors[Math.floor(Math.random() * fireworkColors.length)];
+                
+                // थोड़ा डिले ताकि सारे पार्टिकल एक साथ न निकलें
+                setTimeout(() => {
+                    createParticle(x, y, angle, speed, color);
+                }, Math.random() * 200);
+            }
+        }
+
+        // पेज लोड पर कुछ पटाखे
+        window.addEventListener('load', () => {
+            setTimeout(() => createFirework(window.innerWidth / 2, window.innerHeight * 0.7), 500);
+            setTimeout(() => createFirework(window.innerWidth / 4, window.innerHeight * 0.8), 1200);
+            setTimeout(() => createFirework(window.innerWidth * 3 / 4, window.innerHeight * 0.6), 1900);
+
+             // हर कुछ सेकंड में एक पटाखा (ऑटोमेटिक)
+            setInterval(() => {
+                createFirework(Math.random() * window.innerWidth, window.innerHeight * (0.5 + Math.random() * 0.4) );
+            }, 5000 + Math.random() * 3000); // 5-8 सेकंड के बीच
+        });
+
+    </script>
+</body>
+</html>
